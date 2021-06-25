@@ -1,14 +1,21 @@
+// 1330. 두 수 비교하기
 #include <iostream>
 using namespace std;
+
 int main() {
-    int a, b;
-    
-    cin >> a >> b;
-    
-    if(a < 0 || a > 10 || b < 0 || b > 10){
-        return 0;
-    }
-    
-    cout << a+b;
-    return 0;
+	int a, b;
+	
+	while (1) {
+		cin >> a >> b;
+		if (!(a > 10000 || a < -10000 || b > 10000 || b < -10000))
+			break;
+	}
+	if (a > b)
+		cout << ">";
+	else if (a < b)
+		cout << "<";
+	else
+		cout << "==";
+
+	return 0;
 }
