@@ -1,14 +1,22 @@
+// 2439. 별 찍기 - 2
 #include <iostream>
 using namespace std;
+
 int main() {
-    int a, b;
-    
-    cin >> a >> b;
-    
-    if(a < 0 || a > 10 || b < 0 || b > 10){
-        return 0;
-    }
-    
-    cout << a+b;
-    return 0;
+	int n;
+	do {
+		cin >> n;
+	} while (n < 1 || n > 100);
+
+	for (int i = 1; i <= n; ++i) {
+		for (int j = 0; j < n - i; ++j) {
+			cout << " ";
+		}
+		for (int j = 0; j < i; ++j) {
+			cout << "*";
+		}
+		cout << endl;
+	}
+
+	return 0;
 }
