@@ -1,14 +1,17 @@
+// 2739. 구구단
 #include <iostream>
 using namespace std;
+
 int main() {
-    int a, b;
-    
-    cin >> a >> b;
-    
-    if(a < 0 || a > 10 || b < 0 || b > 10){
-        return 0;
-    }
-    
-    cout << a+b;
-    return 0;
+	int n;
+
+	do {
+		cin >> n;
+	} while (n < 1 || n > 9);
+
+	for (int i = 1; i <= 9; ++i) {
+		cout << n << " * " << i << " = " << n * i << endl;
+	}
+
+	return 0;
 }

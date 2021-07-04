@@ -1,14 +1,30 @@
+// 2753. 윤년
 #include <iostream>
 using namespace std;
+
 int main() {
-    int a, b;
-    
-    cin >> a >> b;
-    
-    if(a < 0 || a > 10 || b < 0 || b > 10){
-        return 0;
-    }
-    
-    cout << a+b;
-    return 0;
+	int y;
+
+	do {
+		cin >> y;
+	} while (y < 1 || y > 4000);
+
+	if (y % 4 == 0) {
+		if (y % 400 == 0) {
+			cout << 1;
+			return 0;
+		}
+		else if (y % 100 == 0) {
+			cout << 0;
+			return 0;
+		}
+
+		cout << 1;
+
+	}
+	else {
+		cout << 0;
+	}
+
+	return 0;
 }
