@@ -1,14 +1,13 @@
+// 10172. 개
 #include <iostream>
 using namespace std;
+
 int main() {
-    int a, b;
-    
-    cin >> a >> b;
-    
-    if(a < 0 || a > 10 || b < 0 || b > 10){
-        return 0;
-    }
-    
-    cout << a+b;
-    return 0;
+	cout << "|\\_/|" << '\n';
+	cout << "|q p|   /}" << '\n';
+	cout << "( 0 )\"\"\"\\" << '\n';
+	cout << "|\"^\"`    |" << '\n';
+	cout << "||_/=\\\\__|" << '\n';
+
+	return 0;
 }

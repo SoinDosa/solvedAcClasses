@@ -1,14 +1,24 @@
+// 9498. 시험 성적
 #include <iostream>
 using namespace std;
+
 int main() {
-    int a, b;
-    
-    cin >> a >> b;
-    
-    if(a < 0 || a > 10 || b < 0 || b > 10){
-        return 0;
-    }
-    
-    cout << a+b;
-    return 0;
+	int score;
+
+	do {
+		cin >> score;
+	} while (score < 0 || score > 100);
+
+	if (score >= 90)
+		cout << 'A';
+	else if (score >= 80)
+		cout << 'B';
+	else if (score >= 70)
+		cout << 'C';
+	else if (score >= 60)
+		cout << 'D';
+	else
+		cout << 'F';
+
+	return 0;
 }
