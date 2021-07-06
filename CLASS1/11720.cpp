@@ -1,14 +1,17 @@
+// 11720. 숫자의 합
 #include <iostream>
 using namespace std;
+
 int main() {
-    int a, b;
-    
-    cin >> a >> b;
-    
-    if(a < 0 || a > 10 || b < 0 || b > 10){
-        return 0;
-    }
-    
-    cout << a+b;
-    return 0;
+	int n, sum = 0;
+	string s;
+
+	cin >> n;
+	cin >> s;
+	
+	for (int i = 0; i < n; ++i) {
+		sum += s[i] - '0';
+	}
+
+	cout << sum;
 }

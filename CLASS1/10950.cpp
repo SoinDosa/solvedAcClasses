@@ -1,14 +1,22 @@
+// 10950. A+B - 3
 #include <iostream>
 using namespace std;
+
 int main() {
-    int a, b;
-    
-    cin >> a >> b;
-    
-    if(a < 0 || a > 10 || b < 0 || b > 10){
-        return 0;
-    }
-    
-    cout << a+b;
-    return 0;
+	int t, a, b;
+
+	cin >> t;
+
+	for (int i = 0; i < t; ++i) {
+		do {
+			cin >> a;
+		} while (a < 1 || a > 10);
+		do {
+			cin >> b;
+		} while (b < 1 || b > 10);
+
+		cout << a + b << '\n';
+	}
+
+	return 0;
 }
